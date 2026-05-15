@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<form action='@Url.Action("GenerarSugerencia", "Home")' method="get">
+<h1> Recentify </h1>
+<h4>Nombre</h4>
+    <input type="text" name="nombreCocinero" required />
+    <br /><br />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <h4>Fecha de nacimiento</h4>
+    <input type="date" name="fechaNacimiento" required />
+    <br /><br />
+
+    <h4>Tipo de comida</h4>
+
+    <input type="radio" name="tipoComida" value="Caliente" required />
+    <span>Caliente</span>
+
+    <input type="radio" name="tipoComida" value="Fría" />
+    <span>Fría</span>
+    <br /><br />
+
+    <h4>Presupuesto</h4>
+    <input type="number" name="presupuesto" min="1" required />
+    <br /><br />
+
+    <h4>Cantidad de personas</h4>
+    <input type="number" name="cantComensales" min="1" max="20" required />
+    <br /><br />
+
+    <button type="submit">Enviar</button>
+
+</form>
